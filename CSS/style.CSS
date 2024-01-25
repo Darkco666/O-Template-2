@@ -10,6 +10,7 @@ html {
 
 :root {
     --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
 }
 
 body {
@@ -122,7 +123,7 @@ header nav ul li a:hover {
         display: none;
     }
 
-    header nav .toggle-menu:hover + ul {
+    header nav .toggle-menu:hover+ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -133,11 +134,11 @@ header nav ul li a:hover {
         background-color: rgba(0 0 0 / 50%);
     }
 
-    header nav .toggle-menu:hover + ul li {
+    header nav .toggle-menu:hover+ul li {
         width: 100%;
     }
 
-    header nav .toggle-menu:hover + ul li a {
+    header nav .toggle-menu:hover+ul li a {
         padding: 15px;
     }
 }
@@ -165,4 +166,120 @@ header nav .form i {
 
 header nav .form i:hover {
     color: var(--main-color);
+}
+
+/* ================================================== */
+
+.landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url(../images/Colorful-Spiral-Galaxy-AI-Generated-4K-Wallpaper-1024x576.webp);
+    background-size: cover;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.landing .text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing .text .content {
+    max-width: 500px;
+}
+
+.landing .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.landing .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: #ddd;
+}
+
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .landing .text .content {
+        max-width: 100%;
+    }
+
+    .landing .change-background {
+        display: none;
+    }
+}
+
+.landing .fa-angle-left {
+    left: 30px;
+}
+
+.landing .fa-angle-right {
+    right: 30px;
+}
+
+.landing .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+
+.landing .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+
+.landing .bullets li.active,
+.landing .bullets li:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }
