@@ -16,6 +16,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
+    background-color: black;
 }
 
 ul {
@@ -345,6 +346,8 @@ header nav .form i:hover {
     border-color: var(--main-color);
 }
 
+/* ================================================== */
+
 .services {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -387,4 +390,76 @@ header nav .form i:hover {
 .services .srv-box p {
     line-height: 2;
     color:#777 ;
+}
+
+/* ================================================== */
+
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url(../images/retina_1708x683_image_0__4_-f1e778fbbd924b4e8f1d919dd5ab2c98.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.design::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.design .image {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+    }
+}
+
+.design .image img {
+    width: 300px;
+    height: 460px;
+    position: relative;
+    bottom: -150px;
+}
+
+.design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+.design .text h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.design .text ul li {
+    padding: 15px 0;
+}
+
+.design .text ul li::before {
+    content: "\f108";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 20px;
+    top: 1px;
 }
