@@ -623,3 +623,25 @@ header nav .form i:hover {
     text-transform: uppercase;
     border: none;
 }
+
+/* ================================================== */
+
+.about {
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .about img {
+        bottom: -50px;
+        margin-top: -50px;
+    }
+}
