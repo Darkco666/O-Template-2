@@ -22,6 +22,24 @@ ul {
     list-style: none;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
